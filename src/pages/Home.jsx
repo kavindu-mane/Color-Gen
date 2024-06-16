@@ -126,8 +126,8 @@ export const Home = () => {
           </div>
         </section>
 
-        <section className="flex flex-col items-center justify-center w-full pb-10 px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-11 gap-y-2 lg:gap-x-8 w-full max-w-3xl">
+        <section className="flex flex-col items-center justify-center w-full pb-10 max-w-3xl">
+          <div className="grid grid-cols-1 sm:grid-cols-11 gap-y-2 lg:gap-x-8 w-full">
             {Object.entries(palette).map(([shade, colorValue]) => (
               <div key={shade} className="flex flex-col items-center">
                 <div
@@ -152,7 +152,7 @@ export const Home = () => {
           </div>
         </section>
 
-        <section>
+        <section className="max-w-7xl">
           <div className="container px-6 pb-8 m-auto">
             <div className="grid grid-cols-4 gap-6 lg:grid-cols-12">
               <div className="col-span-4 lg:col-span-3">
