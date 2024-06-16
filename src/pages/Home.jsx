@@ -8,11 +8,13 @@ import {ForgotPassword} from "../components/cards/ForgotPassword.jsx";
 import {SwitchNotification} from "../components/cards/SwitchNotification.jsx";
 import {Stats} from "../components/cards/Stats.jsx";
 import {Pricing} from "../components/cards/Pricing.jsx";
+import {FaPaste} from "react-icons/fa";
 
 export const Home = () => {
   const [color, setColor] = useState("#3b82f6");
   const [inputColor, setInputColor] = useState("#3b82f6");
   const [tooltip, setTooltip] = useState({});
+  const [, setPaletteCode] = useState("");
 
   const handleColorClick = (shade) => {
     navigator.clipboard.writeText(palette[shade].toUpperCase());
@@ -78,6 +80,24 @@ export const Home = () => {
     setInputColor(newColor);
   };
 
+  const generatePaletteCode = () => {
+    let code = `{
+  'primary': {
+`;
+    Object.entries(palette).forEach(([shade, colorValue]) => {
+      code += `    '${shade}': '${colorValue.toUpperCase()}',\n`;
+    });
+    code += `  },
+}`;
+    return code;
+  };
+
+  const copyPaletteCode = () => {
+    const code = generatePaletteCode();
+    navigator.clipboard.writeText(code);
+    setPaletteCode(code);
+  };
+
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.keyCode === 32) {
@@ -122,6 +142,13 @@ export const Home = () => {
                 placeholder="#FFFFFF"
                 className="block w-full rounded-l-none rtl:rounded-l-lg rtl:rounded-r-none placeholder-neutral-400/70 dark:placeholder-neutral-500 rounded-lg border border-neutral-200 bg-white px-5 py-2.5 text-neutral-700 focus:border-neutral-400 focus:outline-none dark:border-neutral-600 dark:bg-neutral-900 dark:text-neutral-300"
               />
+              <button
+                type="button"
+                onClick={copyPaletteCode}
+                className="mx-3 py-3 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-neutral-950 hover:bg-neutral-800 dark:bg-white dark:hover:bg-gray-300 text-white dark:text-black disabled:opacity-50 disabled:pointer-events-none"
+              >
+                <FaPaste />
+              </button>
             </div>
           </div>
         </section>
