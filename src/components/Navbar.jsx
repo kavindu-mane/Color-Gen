@@ -6,7 +6,6 @@ import {FaMoon, FaSun} from "react-icons/fa";
 
 const navItems = [
   {name: 'Home', path: '/'},
-  {name: 'Gallery', path: '/gallery'}
 ];
 
 export const Navbar = () => {
