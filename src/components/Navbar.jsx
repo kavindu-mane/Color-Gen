@@ -24,18 +24,18 @@ export const Navbar = () => {
           <Link to="/">
             <img src="/vite.svg" alt="logo" className="h-8 w-10"/>
           </Link>
+        </div>
 
-          <div className="hidden gap-x-5 lg:flex items-center justify-center">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`rounded-md ${pathname === item.path ? "bg-black dark:bg-white text-white dark:text-black" : "text-black dark:text-white"} px-3 py-0.5`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
+        <div className="hidden gap-x-5 lg:flex items-center justify-center">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              to={item.path}
+              className={`rounded-md ${pathname === item.path ? "bg-black dark:bg-white text-white dark:text-black" : "text-black dark:text-white"} px-3 py-0.5`}
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
 
         {/* Buttons */}
