@@ -83,7 +83,7 @@ export const Home = () => {
                 type="color"
                 value={color}
                 onChange={handleColorChange}
-                className="w-12 h-[2.88rem] p-1 border rounded-bl-lg rounded-tl-lg border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-900"
+                className="w-12 h-[2.88rem] p-1.5 border rounded-bl-lg rounded-tl-lg border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-900"
               />
               <input
                 type="text"

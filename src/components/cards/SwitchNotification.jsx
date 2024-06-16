@@ -1,7 +1,10 @@
 import {IoClose} from "react-icons/io5";
 import PropTypes from "prop-types";
+import {useState} from "react";
 
 export const SwitchNotification = ({ color }) => {
+  const [isChecked, setIsChecked] = useState(false);
+
   return (
     <>
       <div className="size-full overflow-x-hidden overflow-y-auto">
@@ -47,8 +50,8 @@ export const SwitchNotification = ({ color }) => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       >
-                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
-                        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+                        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
                       </svg>
 
                       <span className="ms-5">
@@ -57,22 +60,22 @@ export const SwitchNotification = ({ color }) => {
                         </span>
                         <span className="block text-sm text-gray-500 dark:text-neutral-500">
                           Get important notifications about you or activity
-                          you've missed
+                          you&apos;ve missed
                         </span>
                       </span>
                     </span>
 
                     <input
                       type="checkbox"
-                      style={{ backgroundColor: color }}
-                      className="relative w-[3.25rem] h-7 bg-gray-100 checked:bg-none checked:bg-blue-600 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 ring-1 ring-transparent focus:border-blue-600 focus:ring-blue-600 ring-offset-white focus:outline-none appearance-none  dark:bg-neutral-700 dark:checked:bg-blue-600 dark:focus:ring-offset-gray-800
-              before:inline-block before:size-6 before:bg-white checked:before:bg-blue-200 before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-neutral-400 dark:checked:before:bg-blue-200"
-                      checked
+                      style={{backgroundColor: color}}
+                      className="relative w-[3.25rem] h-7 bg-gray-100 checked:bg-none checked:bg-blue-600 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 ring-1 ring-transparent focus:border-blue-600 focus:ring-blue-600 ring-offset-white focus:outline-none appearance-none dark:bg-neutral-700 dark:checked:bg-blue-600 dark:focus:ring-offset-gray-800 before:inline-block before:size-6 before:bg-gray-100 checked:before:bg-blue-200 before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-neutral-400 dark:checked:before:bg-blue-200"
+                      checked={true}
                     />
                   </label>
                 </div>
 
-                <div className="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-800">
+                <div
+                  className="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-800">
                   <label
                     htmlFor="hs-meetups-near-you"
                     className="flex p-4 md:p-5"
@@ -90,10 +93,10 @@ export const SwitchNotification = ({ color }) => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       >
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                        <circle cx="9" cy="7" r="4" />
-                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                       </svg>
 
                       <span className="ms-5">
@@ -109,10 +112,10 @@ export const SwitchNotification = ({ color }) => {
 
                     <input
                       type="checkbox"
-                      style={{ backgroundColor: color }}
-                      className="relative w-[3.25rem] h-7 bg-gray-100 checked:bg-none checked:bg-blue-600 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 ring-1 ring-transparent focus:border-blue-600 focus:ring-blue-600 ring-offset-white focus:outline-none appearance-none  dark:bg-neutral-700 dark:checked:bg-blue-600 dark:focus:ring-offset-gray-800
-
-              before:inline-block before:size-6 before:bg-white checked:before:bg-blue-200 before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-neutral-400 dark:checked:before:bg-blue-200"
+                      style={{backgroundColor: isChecked ? color : 'initial'}}
+                      className="relative w-[3.25rem] h-7 bg-gray-100 checked:bg-none checked:bg-blue-600 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 ring-1 ring-transparent focus:border-blue-600 focus:ring-blue-600 ring-offset-white focus:outline-none appearance-none dark:bg-neutral-700 dark:checked:bg-blue-600 dark:focus:ring-offset-gray-800 before:inline-block before:size-6 before:bg-gray-100 checked:before:bg-blue-200 before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-neutral-400 dark:checked:before:bg-blue-200"
+                      checked={isChecked}
+                      onChange={() => setIsChecked(!isChecked)}
                     />
                   </label>
                 </div>

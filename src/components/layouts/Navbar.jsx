@@ -13,7 +13,7 @@ export const Navbar = () => {
       <div className="flex w-full max-w-7xl items-center justify-between">
         <div className="flex items-center justify-center gap-x-8">
           <Link to="/">
-            <img src="/vite.svg" alt="logo" className="h-8 w-10"/>
+            <img src="/logo-text.svg" alt="logo" className="h-6 w-auto dark:invert"/>
           </Link>
         </div>
 
