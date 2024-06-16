@@ -38,9 +38,9 @@ export const ForgotPassword = ({ color }) => {
                           type="email"
                           id="email"
                           name="email"
+                          placeholder="example@gmail.com"
                           className="px-4 block w-full placeholder-neutral-400/70 dark:placeholder-neutral-500 rounded-lg border border-neutral-200 bg-white py-2.5 text-neutral-700 focus:border-neutral-400 focus:outline-none dark:border-neutral-600 dark:bg-neutral-900 dark:text-neutral-300"
                           required
-                          aria-describedby="email-error"
                         />
                       </div>
                     </div>

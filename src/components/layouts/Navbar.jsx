@@ -17,8 +17,7 @@ export const Navbar = () => {
           </Link>
         </div>
 
-        {/* Buttons */}
-        <div className="flex items-center gap-x-4">
+        <div className="flex items-center">
           {/* Theme button */}
           <button
             className="h-6 w-6"
