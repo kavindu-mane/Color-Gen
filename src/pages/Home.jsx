@@ -39,16 +39,13 @@ export const Home = () => {
   const handleTextInputChange = (event) => {
     let newColor = event.target.value.trim().toLowerCase();
 
-    if (!newColor.startsWith('#')) {
+    if (!newColor.startsWith("#")) {
       newColor = `#${newColor}`;
     }
-
     if (newColor.length > 7) {
       return;
     }
-
     setInputColor(newColor);
-
     if (chroma.valid(newColor)) {
       setColor(newColor);
     }
@@ -84,13 +81,13 @@ export const Home = () => {
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.keyCode === 32) {
+        event.preventDefault();
         generateNewColor();
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
 
-    // Cleanup function to remove the event listener when the component unmounts
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
@@ -99,7 +96,7 @@ export const Home = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen">
-        <Navbar/>
+        <Navbar />
         <section className="pt-16 px-6">
           <h1 className="text-4xl font-bold text-black dark:text-white text-center mt-12">
             Tailwind CSS Color Generator
@@ -135,7 +132,7 @@ export const Home = () => {
               <div key={shade} className="flex flex-col items-center">
                 <div
                   className="w-full sm:w-14 lg:w-16 h-16 rounded-lg relative"
-                  style={{backgroundColor: colorValue}}
+                  style={{ backgroundColor: colorValue }}
                   onClick={() => handleColorClick(shade)}
                 >
                   {tooltip[shade] && (
@@ -159,13 +156,13 @@ export const Home = () => {
           <div className="container px-6 pb-8 m-auto">
             <div className="grid grid-cols-4 gap-6 lg:grid-cols-12">
               <div className="col-span-4 lg:col-span-3">
-                <SignOut color={color}/>
+                <SignOut color={color} />
               </div>
               <div className="col-span-4 lg:col-span-6">
-                <ForgotPassword color={color}/>
+                <ForgotPassword color={color} />
               </div>
               <div className="col-span-4 lg:col-span-3">
-                <Cookie color={color}/>
+                <Cookie color={color} />
               </div>
             </div>
           </div>
@@ -173,19 +170,19 @@ export const Home = () => {
           <div className="container px-6 pb-8 m-auto">
             <div className="grid grid-cols-4 gap-6 lg:grid-cols-12">
               <div className="col-span-4 lg:col-span-7">
-                <Pricing color={color}/>
+                <Pricing color={color} />
               </div>
               <div className="col-span-4 lg:col-span-5">
-                <SwitchNotification color={color}/>
+                <SwitchNotification color={color} />
               </div>
             </div>
           </div>
 
           <div className="container px-6 pb-8 m-auto">
-            <Stats color={color}/>
+            <Stats color={color} />
           </div>
         </section>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
