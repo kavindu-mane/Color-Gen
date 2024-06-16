@@ -16,7 +16,7 @@ export const Navbar = () => {
 
   return (
     <div
-      className={`fixed ${currentTheme === "light" && opened ? "bg-white" : ""} ${currentTheme === "dark" && opened ? "bg-black" : ""} top-0 flex w-full flex-col items-center justify-center p-5`}
+      className={`${currentTheme === "light" && opened ? "bg-white" : ""} ${currentTheme === "dark" && opened ? "bg-black" : ""} flex w-full flex-col items-center justify-center p-5`}
     >
       <div className="flex w-full max-w-7xl items-center justify-between">
         <div className="flex items-center justify-center gap-x-8">

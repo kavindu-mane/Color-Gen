@@ -1,6 +1,8 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Navbar} from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
+import {CookieCard} from "../components/CookieCard.jsx";
+import chroma from "chroma-js";
 
 export const Home = () => {
   const [color, setColor] = useState("#FFFFFF");
@@ -10,20 +12,62 @@ export const Home = () => {
   };
 
   const handleTextInputChange = (event) => {
-    const newColor = event.target.value.startsWith("#") ? event.target.value : `#${event.target.value}`;
+    const newColor = event.target.value.startsWith("#")
+      ? event.target.value
+      : `#${event.target.value}`;
     if (/^#[0-9A-F]{0,6}$/i.test(newColor)) {
       setColor(newColor);
     }
   };
 
+  const generatePalette = (baseColor) => {
+    const scale = chroma.scale([baseColor, 'white']).mode('lab').colors(10).reverse();
+    const palette = {};
+    for (let i = 0; i <= 9; i++) {
+      palette[i * 100 + 50] = scale[i];
+    }
+    return palette;
+  };
+
+  const palette = generatePalette(color);
+
+  const generateNewColor = () => {
+    const newColor = chroma.random().hex();
+    setColor(newColor);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.keyCode === 32) {
+        generateNewColor();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    // Cleanup function to remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen">
-        <Navbar />
-        <section className="flex flex-grow items-center justify-center w-full">
+        <Navbar/>
+        <section className="pt-16 px-6">
+          <h1 className="text-4xl font-bold text-black dark:text-white text-center mt-12">
+            Tailwind CSS Color Generator
+          </h1>
+          <h3 className="text-lg text-gray-500 dark:text-gray-400 text-center mt-2">
+            Press space bar to generate a custom color scale
+          </h3>
+        </section>
+
+        <section className="flex flex-grow items-center justify-center w-full py-10">
           {/* Content */}
-          <div className="flex items-center justify-center max-w-5xl w-full">
-            <div className="flex items-center justify-center mt-2 mx-6 w-full">
+          <div className="flex items-center justify-center max-w-xl w-full">
+            <div className="flex items-center justify-center mx-6 w-full">
               <input
                 type="color"
                 value={color}
@@ -40,7 +84,46 @@ export const Home = () => {
             </div>
           </div>
         </section>
-        <Footer />
+
+        <section className="flex flex-col items-center justify-center w-full pb-10 px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-10 gap-y-2 w-full max-w-5xl">
+            {Object.entries(palette).map(([shade, colorValue]) => (
+              <div key={shade} className="flex flex-col items-center">
+                <div
+                  className="w-full sm:w-16 h-16 rounded-lg"
+                  style={{backgroundColor: colorValue}}
+                />
+                <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
+                  {shade}
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  {colorValue}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <div className="container px-6 pb-8 m-auto">
+            <div className="grid grid-cols-4 gap-2 md:grid-cols-8 lg:grid-cols-12">
+              <div className="col-span-4 lg:col-span-7">
+                <div className="grid grid-cols-4 gap-2 md:grid-cols-8 lg:grid-cols-12">
+                  <div className="col-span-8 lg:col-span-6">
+                    <CookieCard color={color}/>
+                  </div>
+                  <div className="col-span-8 lg:col-span-6">
+                    <CookieCard color={color}/>
+                  </div>
+                </div>
+              </div>
+              <div className="col-span-4 lg:col-span-5">
+                <CookieCard color={color}/>
+              </div>
+            </div>
+          </div>
+        </section>
+        <Footer/>
       </div>
     </>
   );
