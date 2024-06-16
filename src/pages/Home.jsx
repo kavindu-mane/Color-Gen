@@ -1,15 +1,16 @@
 import {useEffect, useState} from "react";
 import {Navbar} from "../components/layouts/Navbar.jsx";
 import Footer from "../components/layouts/Footer.jsx";
-import {CookieCard} from "../components/cards/CookieCard.jsx";
+import {Cookie} from "../components/cards/Cookie.jsx";
 import chroma from "chroma-js";
 import {SignOut} from "../components/cards/SignOut.jsx";
 import {ForgotPassword} from "../components/cards/ForgotPassword.jsx";
 import {SwitchNotification} from "../components/cards/SwitchNotification.jsx";
 import {Stats} from "../components/cards/Stats.jsx";
+import {Pricing} from "../components/cards/Pricing.jsx";
 
 export const Home = () => {
-  const [color, setColor] = useState("#FFFFFF");
+  const [color, setColor] = useState("#737373");
 
   const handleColorChange = (event) => {
     setColor(event.target.value);
@@ -27,7 +28,11 @@ export const Home = () => {
   const generatePalette = (baseColor) => {
     const darkerShade = chroma(baseColor).darken(2).hex();
     const lighterShade = chroma(baseColor).brighten(2).hex();
-    const scale = chroma.scale([darkerShade, baseColor, lighterShade]).mode('lab').colors(10).reverse();
+    const scale = chroma
+      .scale([darkerShade, baseColor, lighterShade])
+      .mode("lab")
+      .colors(10)
+      .reverse();
     const palette = {};
     for (let i = 0; i <= 9; i++) {
       palette[i * 100 + 50] = scale[i];
@@ -49,18 +54,18 @@ export const Home = () => {
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
 
     // Cleanup function to remove the event listener when the component unmounts
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen">
-        <Navbar/>
+        <Navbar />
         <section className="pt-16 px-6">
           <h1 className="text-4xl font-bold text-black dark:text-white text-center mt-12">
             Tailwind CSS Color Generator
@@ -78,7 +83,7 @@ export const Home = () => {
                 type="color"
                 value={color}
                 onChange={handleColorChange}
-                className="w-12 h-[2.88rem] mt-[0.05rem] p-1 border rounded-bl-lg rounded-tl-lg border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-900"
+                className="w-12 h-[2.88rem] p-1 border rounded-bl-lg rounded-tl-lg border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-900"
               />
               <input
                 type="text"
@@ -97,7 +102,7 @@ export const Home = () => {
               <div key={shade} className="flex flex-col items-center">
                 <div
                   className="w-full sm:w-14 lg:w-16 h-16 rounded-lg"
-                  style={{backgroundColor: colorValue}}
+                  style={{ backgroundColor: colorValue }}
                 />
                 <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
                   {shade}
@@ -113,25 +118,34 @@ export const Home = () => {
         <section>
           <div className="container px-6 pb-8 m-auto">
             <div className="grid grid-cols-4 gap-6 lg:grid-cols-12">
-              <div className="col-span-4 lg:col-span-3"><SignOut color={color}/></div>
-              <div className="col-span-4 lg:col-span-6"><ForgotPassword color={color}/></div>
-              <div className="col-span-4 lg:col-span-3"><CookieCard color={color}/></div>
+              <div className="col-span-4 lg:col-span-3">
+                <SignOut color={color} />
+              </div>
+              <div className="col-span-4 lg:col-span-6">
+                <ForgotPassword color={color} />
+              </div>
+              <div className="col-span-4 lg:col-span-3">
+                <Cookie color={color} />
+              </div>
             </div>
           </div>
 
           <div className="container px-6 pb-8 m-auto">
             <div className="grid grid-cols-4 gap-6 lg:grid-cols-12">
-              <div className="col-span-4 lg:col-span-3"><SignOut color={color}/></div>
-              <div className="col-span-4 lg:col-span-4"><CookieCard color={color}/></div>
-              <div className="col-span-4 lg:col-span-5"><SwitchNotification color={color}/></div>
+              <div className="col-span-4 lg:col-span-7">
+                <Pricing color={color} />
+              </div>
+              <div className="col-span-4 lg:col-span-5">
+                <SwitchNotification color={color} />
+              </div>
             </div>
           </div>
 
           <div className="container px-6 pb-8 m-auto">
-            <Stats color={color}/>
+            <Stats color={color} />
           </div>
         </section>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
