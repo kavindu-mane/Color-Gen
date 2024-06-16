@@ -145,7 +145,7 @@ export const Home = () => {
               <button
                 type="button"
                 onClick={copyPaletteCode}
-                className="mx-3 py-3 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-neutral-950 hover:bg-neutral-800 dark:bg-white dark:hover:bg-gray-300 text-white dark:text-black disabled:opacity-50 disabled:pointer-events-none"
+                className="ml-3 py-3 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-neutral-950 hover:bg-neutral-800 dark:bg-white dark:hover:bg-gray-300 text-white dark:text-black disabled:opacity-50 disabled:pointer-events-none"
               >
                 <FaPaste />
               </button>
@@ -153,7 +153,7 @@ export const Home = () => {
           </div>
         </section>
 
-        <section className="flex flex-col items-center justify-center w-full pb-10 max-w-3xl">
+        <section className="flex flex-col items-center justify-center w-full px-6 lg:px-0 pb-10 max-w-3xl">
           <div className="grid grid-cols-1 sm:grid-cols-11 gap-y-2 lg:gap-x-8 w-full">
             {Object.entries(palette).map(([shade, colorValue]) => (
               <div key={shade} className="flex flex-col items-center">
