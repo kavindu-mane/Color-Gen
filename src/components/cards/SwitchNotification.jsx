@@ -36,7 +36,7 @@ export const SwitchNotification = ({ color }) => {
                 <div className="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-800">
                   <label
                     htmlFor="hs-account-activity"
-                    className="flex p-4 md:p-5"
+                    className="flex p-4"
                   >
                     <span className="flex me-5">
                       <FaRegBell className="hidden sm:block size-8 text-gray-500 dark:text-neutral-500"/>
@@ -66,10 +66,10 @@ export const SwitchNotification = ({ color }) => {
                   className="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-800">
                   <label
                     htmlFor="hs-meetups-near-you"
-                    className="flex p-4 md:p-5"
+                    className="flex p-4"
                   >
                     <span className="flex me-5">
-                      <GoPeople className="hidden sm:block size-9 text-gray-500 dark:text-neutral-500"/>
+                      <GoPeople className="hidden sm:block size-8 text-gray-500 dark:text-neutral-500"/>
 
                       <span className="ms-5">
                         <span className="block font-medium text-gray-800 dark:text-neutral-200">
