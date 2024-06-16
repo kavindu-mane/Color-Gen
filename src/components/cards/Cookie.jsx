@@ -1,21 +1,14 @@
-import {IoClose} from "react-icons/io5";
 import PropTypes from "prop-types";
 
 export const Cookie = ({ color }) => {
   return (
     <>
       <div className="w-full mx-auto">
-        <div className="p-5 border border-gray-200 rounded-xl shadow-sm dark:border-neutral-800">
+        <div className="p-6 border border-gray-200 rounded-xl shadow-sm dark:border-neutral-800">
           <div className="flex justify-between items-center gap-x-5 sm:gap-x-10">
             <h2 className="font-semibold text-gray-800 dark:text-white">
               Cookie Settings
             </h2>
-            <button
-              type="button"
-              className="inline-flex rounded-full p-2 text-gray-500 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-gray-600 dark:hover:bg-neutral-800 dark:text-neutral-300"
-            >
-              <IoClose />
-            </button>
           </div>
           <p className="mt-2 text-sm text-gray-800 dark:text-neutral-200">
             We use cookies to improve your experience and for marketing. Visit

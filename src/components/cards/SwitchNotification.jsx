@@ -1,4 +1,3 @@
-import {IoClose} from "react-icons/io5";
 import PropTypes from "prop-types";
 import {useState} from "react";
 import {FaRegBell} from "react-icons/fa";
@@ -12,17 +11,7 @@ export const SwitchNotification = ({ color }) => {
       <div className="overflow-x-hidden overflow-y-auto">
         <div className="w-full mx-auto">
           <div className="relative flex flex-col bg-transparent border shadow-sm rounded-xl overflow-hidden dark:border-neutral-800">
-            <div className="absolute top-2 end-2">
-              <button
-                type="button"
-                className="flex justify-center items-center size-7 text-sm font-semibold rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-transparent dark:hover:bg-neutral-700"
-              >
-                <span className="sr-only">Close</span>
-                <IoClose />
-              </button>
-            </div>
-
-            <div className="p-8 overflow-y-auto">
+            <div className="p-8 py-10 overflow-y-auto">
               <div className="mb-6 text-center">
                 <h3 className="mb-2 text-xl font-bold text-gray-800 dark:text-neutral-200">
                   Notifications
