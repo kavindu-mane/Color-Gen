@@ -3,6 +3,7 @@ import {Navbar} from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import {CookieCard} from "../components/CookieCard.jsx";
 import chroma from "chroma-js";
+import {SignOut} from "../components/SignOut.jsx";
 
 export const Home = () => {
   const [color, setColor] = useState("#FFFFFF");
@@ -21,7 +22,9 @@ export const Home = () => {
   };
 
   const generatePalette = (baseColor) => {
-    const scale = chroma.scale([baseColor, 'white']).mode('lab').colors(10).reverse();
+    const darkerShade = chroma(baseColor).darken(2).hex();
+    const lighterShade = chroma(baseColor).brighten(2).hex();
+    const scale = chroma.scale([darkerShade, baseColor, lighterShade]).mode('lab').colors(10).reverse();
     const palette = {};
     for (let i = 0; i <= 9; i++) {
       palette[i * 100 + 50] = scale[i];
@@ -86,18 +89,18 @@ export const Home = () => {
         </section>
 
         <section className="flex flex-col items-center justify-center w-full pb-10 px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-10 gap-y-2 w-full max-w-5xl">
+          <div className="grid grid-cols-1 sm:grid-cols-10 gap-y-2 w-full max-w-3xl">
             {Object.entries(palette).map(([shade, colorValue]) => (
               <div key={shade} className="flex flex-col items-center">
                 <div
-                  className="w-full sm:w-16 h-16 rounded-lg"
+                  className="w-full sm:w-14 lg:w-16 h-16 rounded-lg"
                   style={{backgroundColor: colorValue}}
                 />
                 <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
                   {shade}
                 </p>
                 <p className="text-xs text-gray-500 dark:text-gray-400">
-                  {colorValue}
+                  {colorValue.toUpperCase()}
                 </p>
               </div>
             ))}
@@ -106,19 +109,21 @@ export const Home = () => {
 
         <section>
           <div className="container px-6 pb-8 m-auto">
-            <div className="grid grid-cols-4 gap-2 md:grid-cols-8 lg:grid-cols-12">
+            <div className="grid grid-cols-4 gap-4 md:grid-cols-8 lg:grid-cols-12">
               <div className="col-span-4 lg:col-span-7">
-                <div className="grid grid-cols-4 gap-2 md:grid-cols-8 lg:grid-cols-12">
+                <div className="grid grid-cols-4 gap-4 md:grid-cols-8 lg:grid-cols-12">
                   <div className="col-span-8 lg:col-span-6">
                     <CookieCard color={color}/>
                   </div>
+
                   <div className="col-span-8 lg:col-span-6">
                     <CookieCard color={color}/>
                   </div>
                 </div>
               </div>
+
               <div className="col-span-4 lg:col-span-5">
-                <CookieCard color={color}/>
+                <SignOut color={color}/>
               </div>
             </div>
           </div>
