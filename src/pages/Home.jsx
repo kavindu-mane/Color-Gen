@@ -10,7 +10,7 @@ import {Stats} from "../components/cards/Stats.jsx";
 import {Pricing} from "../components/cards/Pricing.jsx";
 
 export const Home = () => {
-  const [color, setColor] = useState("#737373");
+  const [color, setColor] = useState("#3b82f6");
 
   const handleColorChange = (event) => {
     setColor(event.target.value);

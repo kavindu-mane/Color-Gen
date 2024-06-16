@@ -5,7 +5,7 @@ export const Cookie = ({ color }) => {
   return (
     <>
       <div className="w-full mx-auto">
-        <div className="p-4 border border-gray-200 rounded-xl shadow-sm dark:border-neutral-800">
+        <div className="p-5 border border-gray-200 rounded-xl shadow-sm dark:border-neutral-800">
           <div className="flex justify-between items-center gap-x-5 sm:gap-x-10">
             <h2 className="font-semibold text-gray-800 dark:text-white">
               Cookie Settings
@@ -27,7 +27,7 @@ export const Cookie = ({ color }) => {
             >
               Cookies Policy
             </a>{" "}
-            to learn more.
+            to learn more. By clicking &quot;Allow all&quot; you agree to our use of cookies.
           </p>
           <div className="mt-5 mb-2 w-full flex gap-x-2">
             <div className="grid w-full">

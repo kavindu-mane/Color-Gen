@@ -27,9 +27,9 @@ export const Navbar = () => {
             }
           >
             {currentTheme === "light" ? (
-              <FaSun className="h-6 w-6"/>
+              <FaSun className="h-5 w-5"/>
             ) : (
-              <FaMoon className="text-white h-5 w-5"/>
+              <FaMoon className="text-white h-4 w-4"/>
             )}
           </button>
         </div>
