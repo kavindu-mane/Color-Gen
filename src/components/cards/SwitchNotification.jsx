@@ -1,27 +1,28 @@
 import {IoClose} from "react-icons/io5";
 import PropTypes from "prop-types";
 import {useState} from "react";
+import {FaRegBell} from "react-icons/fa";
+import {GoPeople} from "react-icons/go";
 
 export const SwitchNotification = ({ color }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
     <>
-      <div className="size-full overflow-x-hidden overflow-y-auto">
-        <div className="w-full sm:mx-auto">
+      <div className="overflow-x-hidden overflow-y-auto">
+        <div className="w-full mx-auto">
           <div className="relative flex flex-col bg-transparent border shadow-sm rounded-xl overflow-hidden dark:border-neutral-800">
             <div className="absolute top-2 end-2">
               <button
                 type="button"
                 className="flex justify-center items-center size-7 text-sm font-semibold rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-transparent dark:hover:bg-neutral-700"
-                data-hs-overlay="#hs-notifications"
               >
                 <span className="sr-only">Close</span>
                 <IoClose />
               </button>
             </div>
 
-            <div className="sm:p-8 overflow-y-auto">
+            <div className="p-8 overflow-y-auto">
               <div className="mb-6 text-center">
                 <h3 className="mb-2 text-xl font-bold text-gray-800 dark:text-neutral-200">
                   Notifications
@@ -38,21 +39,7 @@ export const SwitchNotification = ({ color }) => {
                     className="flex p-4 md:p-5"
                   >
                     <span className="flex me-5">
-                      <svg
-                        className="flex-shrink-0 mt-1 size-5 text-gray-500 dark:text-neutral-500"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
-                        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
-                      </svg>
+                      <FaRegBell className="hidden sm:block size-8 text-gray-500 dark:text-neutral-500"/>
 
                       <span className="ms-5">
                         <span className="block font-medium text-gray-800 dark:text-neutral-200">
@@ -82,23 +69,7 @@ export const SwitchNotification = ({ color }) => {
                     className="flex p-4 md:p-5"
                   >
                     <span className="flex me-5">
-                      <svg
-                        className="flex-shrink-0 mt-1 size-5 text-gray-500 dark:text-neutral-500"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                        <circle cx="9" cy="7" r="4"/>
-                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                      </svg>
+                      <GoPeople className="hidden sm:block size-9 text-gray-500 dark:text-neutral-500"/>
 
                       <span className="ms-5">
                         <span className="block font-medium text-gray-800 dark:text-neutral-200">
