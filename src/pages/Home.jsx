@@ -1,9 +1,12 @@
 import {useEffect, useState} from "react";
-import {Navbar} from "../components/Navbar.jsx";
-import Footer from "../components/Footer.jsx";
-import {CookieCard} from "../components/CookieCard.jsx";
+import {Navbar} from "../components/layouts/Navbar.jsx";
+import Footer from "../components/layouts/Footer.jsx";
+import {CookieCard} from "../components/cards/CookieCard.jsx";
 import chroma from "chroma-js";
-import {SignOut} from "../components/SignOut.jsx";
+import {SignOut} from "../components/cards/SignOut.jsx";
+import {ForgotPassword} from "../components/cards/ForgotPassword.jsx";
+import {SwitchNotification} from "../components/cards/SwitchNotification.jsx";
+import {Stats} from "../components/cards/Stats.jsx";
 
 export const Home = () => {
   const [color, setColor] = useState("#FFFFFF");
@@ -109,23 +112,23 @@ export const Home = () => {
 
         <section>
           <div className="container px-6 pb-8 m-auto">
-            <div className="grid grid-cols-4 gap-4 md:grid-cols-8 lg:grid-cols-12">
-              <div className="col-span-4 lg:col-span-7">
-                <div className="grid grid-cols-4 gap-4 md:grid-cols-8 lg:grid-cols-12">
-                  <div className="col-span-8 lg:col-span-6">
-                    <CookieCard color={color}/>
-                  </div>
-
-                  <div className="col-span-8 lg:col-span-6">
-                    <CookieCard color={color}/>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-span-4 lg:col-span-5">
-                <SignOut color={color}/>
-              </div>
+            <div className="grid grid-cols-4 gap-6 lg:grid-cols-12">
+              <div className="col-span-4 lg:col-span-3"><SignOut color={color}/></div>
+              <div className="col-span-4 lg:col-span-6"><ForgotPassword color={color}/></div>
+              <div className="col-span-4 lg:col-span-3"><CookieCard color={color}/></div>
             </div>
+          </div>
+
+          <div className="container px-6 pb-8 m-auto">
+            <div className="grid grid-cols-4 gap-6 lg:grid-cols-12">
+              <div className="col-span-4 lg:col-span-3"><SignOut color={color}/></div>
+              <div className="col-span-4 lg:col-span-4"><CookieCard color={color}/></div>
+              <div className="col-span-4 lg:col-span-5"><SwitchNotification color={color}/></div>
+            </div>
+          </div>
+
+          <div className="container px-6 pb-8 m-auto">
+            <Stats color={color}/>
           </div>
         </section>
         <Footer/>
