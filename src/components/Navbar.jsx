@@ -38,9 +38,9 @@ export const Navbar = () => {
           </div>
         </div>
 
-        {/* buttons */}
+        {/* Buttons */}
         <div className="flex items-center gap-x-4">
-          {/* menu button */}
+          {/* Menu button */}
           <button
             onClick={() => setOpened(!opened)}
             className={`menu ${opened ? "opened" : ""} flex h-7 w-fit flex-col items-center justify-center gap-y-1 rounded-lg lg:hidden`}
@@ -48,7 +48,7 @@ export const Navbar = () => {
             <IoMdMenu className="h-5 w-8 text-black dark:text-white"/>
           </button>
 
-          {/* theme button */}
+          {/* Theme button */}
           <button
             className="h-6 w-6"
             onClick={() =>
@@ -56,7 +56,7 @@ export const Navbar = () => {
             }
           >
             {currentTheme === "light" ? (
-              <FaSun className="h-5 w-5"/>
+              <FaSun className="h-6 w-6"/>
             ) : (
               <FaMoon className="text-white h-5 w-5"/>
             )}
@@ -64,7 +64,7 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {/* menu for small devices */}
+      {/* Menu for small devices */}
       {opened && (
         <div className="flex h-screen w-full flex-col items-center gap-y-6 py-8 dark:text-white lg:hidden">
           {navItems.map((item) => (

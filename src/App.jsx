@@ -1,11 +1,14 @@
 import './App.css'
 import {Navbar} from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
     <>
-      <div className="bg-white dark:bg-neutral-950 min-h-screen"/>
-      <Navbar/>
+      <div className="flex flex-col min-h-screen bg-white dark:bg-black">
+        <Navbar/>
+        <Footer/>
+      </div>
     </>
   )
 }
