@@ -1,4 +1,4 @@
-import {ThemeContext} from "../providers/ThemeProvider";
+import {ThemeContext} from "../../providers/ThemeProvider.jsx";
 import {useContext, useState} from "react";
 import {Link, useLocation} from "react-router-dom";
 import {IoMdMenu} from "react-icons/io";

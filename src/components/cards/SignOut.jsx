@@ -9,7 +9,7 @@ export const SignOut = ({color}) => {
         className="size-full overflow-x-hidden overflow-y-auto">
         <div
           className="w-full sm:mx-auto">
-          <div className="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-neutral-900">
+          <div className="relative flex flex-col bg-transparent border border-gray-200 rounded-xl shadow-sm dark:border-neutral-800">
             <div className="absolute top-2 end-2">
               <button type="button"
                       className="flex justify-center items-center size-7 text-sm font-semibold rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-transparent dark:hover:bg-neutral-700">
@@ -17,7 +17,7 @@ export const SignOut = ({color}) => {
               </button>
             </div>
 
-            <div className="p-4 sm:p-10 text-center overflow-y-auto">
+            <div className="p-4 sm:p-6 text-center overflow-y-auto">
               <span
                 className="mb-4 inline-flex justify-center items-center size-[62px] rounded-full border-4 border-yellow-50 bg-yellow-100 text-yellow-500 dark:bg-yellow-700 dark:border-yellow-600 dark:text-yellow-100">
                 <IoIosWarning className="size-7"/>

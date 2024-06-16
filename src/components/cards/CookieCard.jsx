@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 export const CookieCard = ({ color }) => {
   return (
     <>
-      <div className="sm:max-w-sm w-full mx-auto">
-        <div className="p-4 bg-white/60 backdrop-blur-lg rounded-xl shadow-2xl dark:bg-neutral-900/60 dark:shadow-black/70">
+      <div className="w-full mx-auto">
+        <div className="p-4 border border-gray-200 rounded-xl shadow-sm dark:border-neutral-800">
           <div className="flex justify-between items-center gap-x-5 sm:gap-x-10">
             <h2 className="font-semibold text-gray-800 dark:text-white">Cookie Settings</h2>
             <button
