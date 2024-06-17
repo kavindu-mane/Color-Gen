@@ -151,7 +151,6 @@ export const Home = () => {
                   type="text"
                   value={inputColor.toUpperCase()}
                   onChange={handleTextInputChange}
-                  placeholder="#FFFFFF"
                   className="block w-full rounded-l-none rtl:rounded-l-lg rtl:rounded-r-none placeholder-neutral-400/70 dark:placeholder-neutral-500 rounded-lg border border-neutral-200 bg-white px-5 py-2 text-neutral-700 focus:border-neutral-400 focus:outline-none dark:border-neutral-600 dark:bg-neutral-900 dark:text-neutral-300"
                 />
                 <button
@@ -161,7 +160,7 @@ export const Home = () => {
                 >
                   <FaPaste />
                   {showTooltip && (
-                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full mt-1 bg-black dark:bg-white text-white dark:text-black text-xs px-2 py-1 rounded">
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full bg-black dark:bg-white text-white dark:text-black text-xs px-2 py-1 rounded">
                       Copied!
                     </div>
                   )}
@@ -183,7 +182,7 @@ export const Home = () => {
                     onClick={() => handleColorClick(shade)}
                   >
                     {tooltip[shade] && (
-                      <div className="absolute top-0 left-0 bg-black text-white text-xs p-1 rounded">
+                      <div className="absolute top-0 left-0 bg-black text-white text-xs p-1 dark:-m-[0.05rem] rounded-tl-lg rounded-br">
                         Copied
                       </div>
                     )}
