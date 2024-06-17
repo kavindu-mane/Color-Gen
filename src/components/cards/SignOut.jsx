@@ -8,7 +8,7 @@ export const SignOut = ({ color }) => {
         <div className="w-full sm:mx-auto">
           <div className="relative flex flex-col bg-transparent border border-gray-200 rounded-xl shadow-sm dark:border-neutral-800">
             <div className="p-4 sm:p-5 text-center overflow-y-auto">
-              <span className="mb-4 inline-flex justify-center items-center size-[62px] rounded-full border-4 border-yellow-50 bg-yellow-100 text-yellow-500 dark:bg-yellow-700 dark:border-yellow-600 dark:text-yellow-100">
+              <span className="mb-4 inline-flex justify-center items-center size-[62px] lg:size-[38px] xl:size-[62px] rounded-full border-4 border-yellow-50 bg-yellow-100 text-yellow-500 dark:bg-yellow-700 dark:border-yellow-600 dark:text-yellow-100">
                 <IoIosWarning className="size-7" />
               </span>
 

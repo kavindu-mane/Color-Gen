@@ -38,8 +38,10 @@ export const Pricing = ({ color }) => {
                 <div className="mt-5 grid sm:grid-cols-2 gap-y-2 py-4 first:pt-0 last:pb-0 sm:gap-x-6 sm:gap-y-0">
                   <ul className="space-y-2 text-sm sm:text-base">
                     <li className="flex space-x-3">
-                      <span className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500" style={{backgroundColor: color}}>
-                        <IoMdCheckmark />
+                      <span
+                        className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500"
+                        style={{backgroundColor: color}}>
+                        <IoMdCheckmark/>
                       </span>
                       <span className="text-gray-800 dark:text-neutral-200">
                         Up to 10 people
@@ -47,8 +49,10 @@ export const Pricing = ({ color }) => {
                     </li>
 
                     <li className="flex space-x-3">
-                      <span className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500" style={{backgroundColor: color}}>
-                        <IoMdCheckmark />
+                      <span
+                        className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500"
+                        style={{backgroundColor: color}}>
+                        <IoMdCheckmark/>
                       </span>
                       <span className="text-gray-800 dark:text-neutral-200">
                         Collect data
@@ -56,19 +60,35 @@ export const Pricing = ({ color }) => {
                     </li>
 
                     <li className="flex space-x-3">
-                      <span className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500" style={{backgroundColor: color}}>
-                        <IoMdCheckmark />
+                      <span
+                        className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500"
+                        style={{backgroundColor: color}}>
+                        <IoMdCheckmark/>
                       </span>
                       <span className="text-gray-800 dark:text-neutral-200">
                         Code extensibility
                       </span>
                     </li>
+
+                    <div className="hidden lg:block xl:hidden">
+                      <li className="flex space-x-3">
+                      <span
+                        className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500"
+                        style={{backgroundColor: color}}>
+                        <IoMdCheckmark/>
+                      </span>
+                        <span className="text-gray-800 dark:text-neutral-200">
+                        Data export
+                      </span>
+                      </li>
+                    </div>
                   </ul>
 
                   <ul className="space-y-2 text-sm sm:text-base">
                     <li className="flex space-x-3">
-                      <span className="size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 dark:bg-neutral-800 dark:text-neutral-500">
-                        <IoClose />
+                      <span
+                        className="size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 dark:bg-neutral-800 dark:text-neutral-500">
+                        <IoClose/>
                       </span>
                       <span className="text-gray-800 dark:text-neutral-200">
                         Custom reports
@@ -92,6 +112,18 @@ export const Pricing = ({ color }) => {
                         Activity reporting
                       </span>
                     </li>
+
+                    <div className="hidden lg:block xl:hidden">
+                      <li className="flex space-x-3">
+                      <span
+                        className="size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 dark:bg-neutral-800 dark:text-neutral-500">
+                        <IoClose/>
+                      </span>
+                        <span className="text-gray-800 dark:text-neutral-200">
+                        API access
+                      </span>
+                      </li>
+                    </div>
                   </ul>
                 </div>
 

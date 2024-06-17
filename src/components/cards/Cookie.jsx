@@ -20,7 +20,10 @@ export const Cookie = ({ color }) => {
             >
               Cookies Policy
             </a>{" "}
-            to learn more. By clicking &quot;Allow all&quot; you agree to our use of cookies.
+            to learn more.
+            <span className="inline lg:hidden xl:inline">
+              By clicking &quot;Allow all&quot; you agree to our use of cookies.
+            </span>
           </p>
           <div className="mt-5 mb-2 w-full flex gap-x-2">
             <div className="grid w-full">

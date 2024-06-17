@@ -21,11 +21,11 @@ export const SwitchNotification = ({ color }) => {
                 </p>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-4 lg:space-y-[0.65rem] xl:space-y-4">
                 <div className="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-800">
                   <label
                     htmlFor="hs-account-activity"
-                    className="flex p-4"
+                    className="flex p-4 justify-between"
                   >
                     <span className="flex me-5">
                       <FaRegBell className="hidden sm:block size-8 text-gray-500 dark:text-neutral-500"/>
@@ -55,7 +55,7 @@ export const SwitchNotification = ({ color }) => {
                   className="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-800">
                   <label
                     htmlFor="hs-meetups-near-you"
-                    className="flex p-4"
+                    className="flex p-4 justify-between"
                   >
                     <span className="flex me-5">
                       <GoPeople className="hidden sm:block size-8 text-gray-500 dark:text-neutral-500"/>
