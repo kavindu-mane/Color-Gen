@@ -14,7 +14,7 @@ export const Cookie = ({ color }) => {
           <p className="mt-2 text-sm text-gray-800 dark:text-neutral-200">
             We use cookies to improve your experience. Visit our{" "}
             <Link
-              className="inline-flex items-center gap-x-1.5 decoration-2 hover:underline font-medium"
+              className="inline-flex items-center gap-x-1.5 decoration-2 hover:underline font-medium transition-colors duration-300 ease-in-out"
               style={{ color: color }}
               to="#"
             >
@@ -29,7 +29,7 @@ export const Cookie = ({ color }) => {
             <div className="grid w-full">
               <button
                 type="button"
-                className="py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-opacity-90 disabled:opacity-50 disabled:pointer-events-none"
+                className="py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-opacity-90 disabled:opacity-50 disabled:pointer-events-none transition-colors duration-300 ease-in-out"
                 style={{ backgroundColor: color }}
               >
                 Allow all
@@ -38,7 +38,7 @@ export const Cookie = ({ color }) => {
             <div className="grid w-full">
               <button
                 type="button"
-                className="py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-opacity-90 disabled:opacity-50 disabled:pointer-events-none"
+                className="py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-opacity-90 disabled:opacity-50 disabled:pointer-events-none transition-colors duration-300 ease-in-out"
                 style={{ backgroundColor: color }}
               >
                 Reject all

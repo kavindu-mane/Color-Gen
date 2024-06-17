@@ -25,7 +25,7 @@ export const SignOut = ({ color }) => {
                 </button>
                 <button
                   type="button"
-                  className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                  className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none transition-colors duration-300 ease-in-out"
                   style={{ backgroundColor: color }}
                 >
                   Cancel

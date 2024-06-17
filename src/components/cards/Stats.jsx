@@ -8,7 +8,7 @@ export const Stats = ({ color }) => {
           <div className="lg:col-span-4">
             <div className="lg:pe-6 xl:pe-12">
               <p
-                className="text-6xl font-bold leading-10 text-blue-600"
+                className="text-6xl font-bold leading-10 text-blue-600 transition-colors duration-300 ease-in-out"
                 style={{ color: color }}
               >
                 92%
@@ -36,7 +36,7 @@ export const Stats = ({ color }) => {
             <div className="grid gap-6 grid-cols-2 md:grid-cols-4 lg:grid-cols-3 sm:gap-8">
               <div>
                 <p
-                  className="text-3xl font-semibold text-blue-600"
+                  className="text-3xl font-semibold text-blue-600 transition-colors duration-300 ease-in-out"
                   style={{ color: color }}
                 >
                   99.95%
@@ -48,7 +48,7 @@ export const Stats = ({ color }) => {
 
               <div>
                 <p
-                  className="text-3xl font-semibold text-blue-600"
+                  className="text-3xl font-semibold text-blue-600 transition-colors duration-300 ease-in-out"
                   style={{ color: color }}
                 >
                   2,000+
@@ -60,7 +60,7 @@ export const Stats = ({ color }) => {
 
               <div>
                 <p
-                  className="text-3xl font-semibold text-blue-600"
+                  className="text-3xl font-semibold text-blue-600 transition-colors duration-300 ease-in-out"
                   style={{ color: color }}
                 >
                   85%

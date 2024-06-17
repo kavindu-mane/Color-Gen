@@ -19,13 +19,13 @@ export const Pricing = ({ color }) => {
 
                 <div className="mt-5">
                   <span
-                    className="text-6xl font-bold text-gray-800 dark:text-neutral-200"
+                    className="text-6xl font-bold text-gray-800 dark:text-neutral-200 transition-colors duration-300 ease-in-out"
                     style={{ color: color }}
                   >
                     $18
                   </span>
                   <span
-                    className="text-lg font-bold text-gray-800 dark:text-neutral-200"
+                    className="text-lg font-bold text-gray-800 dark:text-neutral-200 transition-colors duration-300 ease-in-out"
                     style={{ color: color }}
                   >
                     .00
@@ -39,7 +39,7 @@ export const Pricing = ({ color }) => {
                   <ul className="space-y-2 text-sm sm:text-base">
                     <li className="flex space-x-3">
                       <span
-                        className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500"
+                        className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500 transition-colors duration-300 ease-in-out"
                         style={{ backgroundColor: color }}
                       >
                         <IoMdCheckmark />
@@ -51,7 +51,7 @@ export const Pricing = ({ color }) => {
 
                     <li className="flex space-x-3">
                       <span
-                        className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500"
+                        className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500 transition-colors duration-300 ease-in-out"
                         style={{ backgroundColor: color }}
                       >
                         <IoMdCheckmark />
@@ -63,7 +63,7 @@ export const Pricing = ({ color }) => {
 
                     <li className="flex space-x-3">
                       <span
-                        className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500"
+                        className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500 transition-colors duration-300 ease-in-out"
                         style={{ backgroundColor: color }}
                       >
                         <IoMdCheckmark />
@@ -76,7 +76,7 @@ export const Pricing = ({ color }) => {
                     <div className="hidden lg:block xl:hidden">
                       <li className="flex space-x-3">
                         <span
-                          className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500"
+                          className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500 transition-colors duration-300 ease-in-out"
                           style={{ backgroundColor: color }}
                         >
                           <IoMdCheckmark />

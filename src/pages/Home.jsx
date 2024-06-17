@@ -153,7 +153,7 @@ export const Home = () => {
                   />
                   <div
                     style={{ backgroundColor: inputColor }}
-                    className="w-full h-full rounded-full"
+                    className="w-full h-full rounded-full transition-colors duration-300 ease-in-out"
                   />
                 </div>
                 <input
