@@ -157,6 +157,7 @@ export const Home = () => {
                   />
                 </div>
                 <input
+                  name="color"
                   type="text"
                   value={inputColor.toUpperCase()}
                   onChange={handleTextInputChange}
