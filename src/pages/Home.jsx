@@ -15,6 +15,7 @@ export const Home = () => {
   const [inputColor, setInputColor] = useState("#3b82f6");
   const [tooltip, setTooltip] = useState({});
   const [, setPaletteCode] = useState("");
+  const [showTooltip, setShowTooltip] = useState(false);
 
   const handleColorClick = (shade) => {
     navigator.clipboard.writeText(palette[shade].toUpperCase());
@@ -96,6 +97,10 @@ export const Home = () => {
     const code = generatePaletteCode();
     navigator.clipboard.writeText(code);
     setPaletteCode(code);
+    setShowTooltip(true);
+    setTimeout(() => {
+      setShowTooltip(false);
+    }, 2000);
   };
 
   useEffect(() => {
@@ -130,8 +135,7 @@ export const Home = () => {
           <section className="flex flex-grow items-center justify-center w-full py-10">
             <div className="flex items-center justify-center max-w-xl w-full">
               <div className="flex items-center justify-center mx-6 w-full">
-                <div
-                  className="relative w-12 h-[2.65rem] mt-[0.05rem] p-1.5 border rounded-bl-lg rounded-tl-lg border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-900">
+                <div className="relative w-12 h-[2.65rem] mt-[0.05rem] p-1.5 border rounded-bl-lg rounded-tl-lg border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-900">
                   <input
                     type="color"
                     value={inputColor}
@@ -139,7 +143,7 @@ export const Home = () => {
                     className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
                   />
                   <div
-                    style={{backgroundColor: inputColor}}
+                    style={{ backgroundColor: inputColor }}
                     className="w-full h-full rounded-full"
                   />
                 </div>
@@ -153,9 +157,14 @@ export const Home = () => {
                 <button
                   type="button"
                   onClick={copyPaletteCode}
-                  className="ml-3 py-3 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-neutral-950 hover:bg-neutral-800 dark:bg-white dark:hover:bg-gray-300 text-white dark:text-black disabled:opacity-50 disabled:pointer-events-none active:scale-95 transition-transform duration-150"
+                  className="relative ml-3 py-3 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-neutral-950 hover:bg-neutral-800 dark:bg-white dark:hover:bg-gray-300 text-white dark:text-black disabled:opacity-50 disabled:pointer-events-none active:scale-95 transition-transform duration-150"
                 >
-                  <FaPaste/>
+                  <FaPaste />
+                  {showTooltip && (
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full mt-1 bg-black dark:bg-white text-white dark:text-black text-xs px-2 py-1 rounded">
+                      Copied!
+                    </div>
+                  )}
                 </button>
               </div>
             </div>
@@ -164,10 +173,13 @@ export const Home = () => {
           <section className="flex items-center justify-center w-full pb-10 max-w-3xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-11 gap-y-2 lg:gap-x-8 w-full">
               {Object.entries(palette).map(([shade, colorValue]) => (
-                <div key={shade} className="flex flex-col items-center justify-center">
+                <div
+                  key={shade}
+                  className="flex flex-col items-center justify-center"
+                >
                   <div
                     className="w-full sm:w-14 lg:w-16 h-16 relative rounded-lg cursor-pointer transition-colors duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
-                    style={{backgroundColor: colorValue}}
+                    style={{ backgroundColor: colorValue }}
                     onClick={() => handleColorClick(shade)}
                   >
                     {tooltip[shade] && (
@@ -191,13 +203,13 @@ export const Home = () => {
             <div className="container pb-6 m-auto">
               <div className="grid grid-cols-4 gap-6 lg:grid-cols-12">
                 <div className="col-span-4 lg:col-span-3">
-                  <SignOut color={color}/>
+                  <SignOut color={color} />
                 </div>
                 <div className="col-span-4 lg:col-span-6">
-                  <ForgotPassword color={color}/>
+                  <ForgotPassword color={color} />
                 </div>
                 <div className="col-span-4 lg:col-span-3">
-                  <Cookie color={color}/>
+                  <Cookie color={color} />
                 </div>
               </div>
             </div>
@@ -205,20 +217,20 @@ export const Home = () => {
             <div className="container pb-6 m-auto">
               <div className="grid grid-cols-4 gap-6 lg:grid-cols-12">
                 <div className="col-span-4 lg:col-span-7">
-                  <Pricing color={color}/>
+                  <Pricing color={color} />
                 </div>
                 <div className="col-span-4 lg:col-span-5">
-                  <SwitchNotification color={color}/>
+                  <SwitchNotification color={color} />
                 </div>
               </div>
             </div>
 
             <div className="container pb-6 m-auto">
-              <Stats color={color}/>
+              <Stats color={color} />
             </div>
           </section>
         </main>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
