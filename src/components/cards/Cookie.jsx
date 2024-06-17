@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 
 export const Cookie = ({ color }) => {
   return (
@@ -12,16 +13,16 @@ export const Cookie = ({ color }) => {
           </div>
           <p className="mt-2 text-sm text-gray-800 dark:text-neutral-200">
             We use cookies to improve your experience. Visit our{" "}
-            <a
+            <Link
               className="inline-flex items-center gap-x-1.5 decoration-2 hover:underline font-medium"
               style={{ color: color }}
-              href="#"
+              to="#"
             >
               Cookies Policy
-            </a>{" "}
-            to learn more.
+            </Link>
+            &nbsp;to learn more.
             <span className="inline lg:hidden xl:inline">
-              By clicking &quot;Allow all&quot; you agree to our use of cookies.
+              &nbsp;By clicking &quot;Allow all&quot; you agree to our use of cookies.
             </span>
           </p>
           <div className="mt-5 mb-2 w-full flex gap-x-2">
