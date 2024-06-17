@@ -18,7 +18,7 @@ export const Home = () => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleColorClick = (shade) => {
-    navigator.clipboard.writeText(palette[shade].toUpperCase());
+    navigator.clipboard.writeText(palette[shade].toUpperCase()).then(r => r);
     setTooltip((prevTooltip) => ({
       ...prevTooltip,
       [shade]: true,
@@ -95,7 +95,7 @@ export const Home = () => {
 
   const copyPaletteCode = () => {
     const code = generatePaletteCode();
-    navigator.clipboard.writeText(code);
+    navigator.clipboard.writeText(code).then(r => r);
     setPaletteCode(code);
     setShowTooltip(true);
     setTimeout(() => {
