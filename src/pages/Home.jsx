@@ -134,7 +134,7 @@ export const Home = () => {
         <main className="px-6 xl:px-0">
           <section className="flex flex-grow items-center justify-center w-full py-10">
             <div className="flex items-center justify-center max-w-xl w-full">
-              <div className="flex items-center justify-center mx-6 w-full">
+              <div className="flex items-center justify-center w-full">
                 <div className="relative w-12 h-[2.65rem] mt-[0.05rem] p-1.5 border rounded-bl-lg rounded-tl-lg border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-900">
                   <input
                     type="color"
