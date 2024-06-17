@@ -11,8 +11,8 @@ import {Pricing} from "../components/cards/Pricing.jsx";
 import {FaPaste} from "react-icons/fa";
 
 export const Home = () => {
-  const [color, setColor] = useState("#3b82f6");
-  const [inputColor, setInputColor] = useState("#3b82f6");
+  const [color, setColor] = useState("#2563eb");
+  const [inputColor, setInputColor] = useState("#2563eb");
   const [tooltip, setTooltip] = useState({});
   const [, setPaletteCode] = useState("");
   const [showTooltip, setShowTooltip] = useState(false);
