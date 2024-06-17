@@ -126,16 +126,25 @@ export const Home = () => {
           <h1 className="text-4xl font-bold text-black dark:text-white text-center mt-12">
             Tailwind CSS Color Generator
           </h1>
-          <h3 className="text-lg text-gray-500 dark:text-gray-400 text-center mt-2">
+          <h3 className="hidden sm:block text-lg text-gray-500 dark:text-gray-400 text-center mt-2">
             Press space bar to generate a custom color scale
           </h3>
+          <div className="sm:hidden flex items-center justify-center">
+            <button
+              type="button"
+              onClick={generateNewColor}
+              className="relative mt-8 py-3 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-neutral-950 hover:bg-neutral-800 dark:bg-white dark:hover:bg-gray-300 text-white dark:text-black disabled:opacity-50 disabled:pointer-events-none active:scale-95 transition-transform duration-150">
+              Generate Random Color
+            </button>
+          </div>
         </section>
 
         <main className="px-6 xl:px-0">
           <section className="flex flex-grow items-center justify-center w-full py-10">
             <div className="flex items-center justify-center max-w-xl w-full">
               <div className="flex items-center justify-center w-full">
-                <div className="relative w-12 h-[2.65rem] mt-[0.05rem] p-1.5 border rounded-bl-lg rounded-tl-lg border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-900">
+                <div
+                  className="relative w-12 h-[2.65rem] mt-[0.05rem] p-1.5 border rounded-bl-lg rounded-tl-lg border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-900">
                   <input
                     type="color"
                     value={inputColor}
