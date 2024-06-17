@@ -180,7 +180,7 @@ export const Home = () => {
         </section>
 
         <section className="max-w-7xl">
-          <div className="container px-6 pb-8 m-auto">
+          <div className="container px-6 pb-6 m-auto">
             <div className="grid grid-cols-4 gap-6 lg:grid-cols-12">
               <div className="col-span-4 lg:col-span-3">
                 <SignOut color={color} />
@@ -194,7 +194,7 @@ export const Home = () => {
             </div>
           </div>
 
-          <div className="container px-6 pb-8 m-auto">
+          <div className="container px-6 pb-6 m-auto">
             <div className="grid grid-cols-4 gap-6 lg:grid-cols-12">
               <div className="col-span-4 lg:col-span-7">
                 <Pricing color={color} />
