@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 
 export const ForgotPassword = ({ color }) => {
   return (
@@ -13,13 +14,13 @@ export const ForgotPassword = ({ color }) => {
                 </h2>
                 <p className="mt-2 text-sm text-gray-600 dark:text-neutral-400">
                   Remember your password?&nbsp;
-                  <a
+                  <Link
                     className="text-blue-600 decoration-2 hover:underline font-medium dark:text-blue-500"
-                    href="#"
+                    to="#"
                     style={{ color: color }}
                   >
                     Sign in here
-                  </a>
+                  </Link>
                 </p>
               </div>
 
