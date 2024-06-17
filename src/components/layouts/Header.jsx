@@ -3,8 +3,8 @@ import {useContext} from "react";
 import {Link} from "react-router-dom";
 import {FaMoon, FaSun} from "react-icons/fa";
 
-export const Navbar = () => {
-  const {currentTheme, changeCurrentTheme} = useContext(ThemeContext);
+export const Header = () => {
+  const { currentTheme, changeCurrentTheme } = useContext(ThemeContext);
 
   return (
     <div
@@ -13,7 +13,11 @@ export const Navbar = () => {
       <div className="flex w-full max-w-7xl items-center justify-between">
         <div className="flex items-center justify-center gap-x-8">
           <Link to="/">
-            <img src="/logo-text.svg" alt="logo" className="h-6 w-auto dark:invert"/>
+            <img
+              src="/logo-text.svg"
+              alt="logo"
+              className="h-6 w-auto dark:invert"
+            />
           </Link>
         </div>
 
@@ -26,9 +30,9 @@ export const Navbar = () => {
             }
           >
             {currentTheme === "light" ? (
-              <FaSun className="h-5 w-5"/>
+              <FaSun className="h-5 w-5" />
             ) : (
-              <FaMoon className="text-white h-4 w-4"/>
+              <FaMoon className="text-white h-4 w-4" />
             )}
           </button>
         </div>

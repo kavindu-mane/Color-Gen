@@ -24,36 +24,33 @@ export const ForgotPassword = ({ color }) => {
               </div>
 
               <div className="mt-5">
-                <form>
-                  <div className="grid gap-y-4">
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm mb-2 dark:text-white"
-                      >
-                        Email address
-                      </label>
-                      <div className="relative">
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          placeholder="example@gmail.com"
-                          className="px-4 block w-full placeholder-neutral-400/70 dark:placeholder-neutral-500 rounded-lg border border-neutral-200 bg-white py-2.5 text-neutral-700 focus:border-neutral-400 focus:outline-none dark:border-neutral-600 dark:bg-neutral-900 dark:text-neutral-300"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
-                      style={{ backgroundColor: color }}
+                <div className="grid gap-y-4">
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-sm mb-2 dark:text-white"
                     >
-                      Reset password
-                    </button>
+                      Email address
+                    </label>
+                    <div className="relative">
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@gmail.com"
+                        className="px-4 block w-full placeholder-neutral-400/70 dark:placeholder-neutral-500 rounded-lg border border-neutral-200 bg-white py-2.5 text-neutral-700 focus:border-neutral-400 focus:outline-none dark:border-neutral-600 dark:bg-neutral-900 dark:text-neutral-300"
+                      />
+                    </div>
                   </div>
-                </form>
+
+                  <button
+                    type="submit"
+                    className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                    style={{ backgroundColor: color }}
+                  >
+                    Reset password
+                  </button>
+                </div>
               </div>
             </div>
           </div>

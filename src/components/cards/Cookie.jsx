@@ -11,8 +11,7 @@ export const Cookie = ({ color }) => {
             </h2>
           </div>
           <p className="mt-2 text-sm text-gray-800 dark:text-neutral-200">
-            We use cookies to improve your experience. Visit
-            our{" "}
+            We use cookies to improve your experience. Visit our{" "}
             <a
               className="inline-flex items-center gap-x-1.5 decoration-2 hover:underline font-medium"
               style={{ color: color }}
