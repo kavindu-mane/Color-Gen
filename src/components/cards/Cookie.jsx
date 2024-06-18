@@ -33,7 +33,7 @@ export const Cookie = ({ color }) => {
                 style={{backgroundColor: color}}
               >
                 <span className="inline lg:hidden xl:inline">Allow all</span>
-                <span className="inline xl:hidden">Allow</span>
+                <span className="hidden lg:inline xl:hidden">Allow</span>
               </button>
             </div>
             <div className="grid w-full">
@@ -43,7 +43,7 @@ export const Cookie = ({ color }) => {
                 style={{backgroundColor: color}}
               >
                 <span className="inline lg:hidden xl:inline">Reject all</span>
-                <span className="inline xl:hidden">Reject</span>
+                <span className="hidden lg:inline xl:hidden">Reject</span>
               </button>
             </div>
           </div>
