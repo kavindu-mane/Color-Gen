@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import {IoClose} from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
 
 export const PopUp = ({ setOpen, children }) => {
   return (

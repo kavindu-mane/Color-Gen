@@ -1,15 +1,16 @@
-import {useEffect, useState} from "react";
-import {Header} from "../components/layouts/Header.jsx";
+import { useEffect, useState } from "react";
+import { Header } from "../components/layouts/Header.jsx";
 import Footer from "../components/layouts/Footer.jsx";
-import {Cookie} from "../components/cards/Cookie.jsx";
+import { Cookie } from "../components/cards/Cookie.jsx";
 import chroma from "chroma-js";
-import {SignOut} from "../components/cards/SignOut.jsx";
-import {ForgotPassword} from "../components/cards/ForgotPassword.jsx";
-import {SwitchNotification} from "../components/cards/SwitchNotification.jsx";
-import {Stats} from "../components/cards/Stats.jsx";
-import {Pricing} from "../components/cards/Pricing.jsx";
-import {FaCopy, FaFileExport} from "react-icons/fa";
-import {PopUp} from "../components/modals/PopUp.jsx";
+import { SignOut } from "../components/cards/SignOut.jsx";
+import { ForgotPassword } from "../components/cards/ForgotPassword.jsx";
+import { SwitchNotification } from "../components/cards/SwitchNotification.jsx";
+import { Stats } from "../components/cards/Stats.jsx";
+import { Pricing } from "../components/cards/Pricing.jsx";
+import { FaCopy, FaFileExport } from "react-icons/fa";
+import { PopUp } from "../components/modals/PopUp.jsx";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 export const Home = () => {
   const [color, setColor] = useState("#2563eb");
@@ -35,7 +36,7 @@ export const Home = () => {
       setTooltip((prev) => ({ ...prev, [shade]: true }));
       setTimeout(
         () => setTooltip((prev) => ({ ...prev, [shade]: false })),
-        2000,
+        2000
       );
     });
   };
@@ -79,7 +80,7 @@ export const Home = () => {
     return `'primary': {
 ${Object.entries(palette)
   .map(
-    ([shade, colorValue]) => `    '${shade}': '${colorValue.toUpperCase()}',`,
+    ([shade, colorValue]) => `    '${shade}': '${colorValue.toUpperCase()}',`
   )
   .join("\n")}
 },`;
@@ -111,7 +112,7 @@ ${Object.entries(palette)
               }}
             />
           </div>
-          <Header/>
+          <Header />
           <section className="pt-16 px-6 text-center">
             <h1 className="text-4xl font-bold text-black dark:text-white mt-12">
               Tailwind CSS Color Generator
@@ -227,9 +228,20 @@ ${Object.entries(palette)
       {showTooltip && (
         <PopUp setOpen={setShowTooltip}>
           <div className="p-4 sm:p-6 overflow-y-auto">
-            <pre className="text-md text-gray-600 dark:text-gray-400">
-              <code>{generatePaletteCode()}</code>
-            </pre>
+            <div className="dark:invert selection:bg-red-200">
+              <SyntaxHighlighter
+                language="javascript"
+                customStyle={{
+                  padding: "1.5rem",
+                  paddingLeft: "3rem",
+                  paddingRight: "3rem",
+                  borderRadius: "0.5rem",
+                }}
+              >
+                {generatePaletteCode()}
+              </SyntaxHighlighter>
+            </div>
+
             <button
               className="relative mt-8 py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-neutral-950 hover:bg-neutral-800 dark:bg-white dark:hover:bg-gray-300 text-white dark:text-black"
               onClick={copyPaletteCode}
