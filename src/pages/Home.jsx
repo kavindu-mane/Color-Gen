@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
-import { Header } from "../components/layouts/Header.jsx";
+import {useEffect, useState} from "react";
+import {Header} from "../components/layouts/Header.jsx";
 import Footer from "../components/layouts/Footer.jsx";
-import { Cookie } from "../components/cards/Cookie.jsx";
+import {Cookie} from "../components/cards/Cookie.jsx";
 import chroma from "chroma-js";
-import { SignOut } from "../components/cards/SignOut.jsx";
-import { ForgotPassword } from "../components/cards/ForgotPassword.jsx";
-import { SwitchNotification } from "../components/cards/SwitchNotification.jsx";
-import { Stats } from "../components/cards/Stats.jsx";
-import { Pricing } from "../components/cards/Pricing.jsx";
-import { FaCopy, FaFileExport } from "react-icons/fa";
-import { PopUp } from "../components/modals/PopUp.jsx";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import {SignOut} from "../components/cards/SignOut.jsx";
+import {ForgotPassword} from "../components/cards/ForgotPassword.jsx";
+import {SwitchNotification} from "../components/cards/SwitchNotification.jsx";
+import {Stats} from "../components/cards/Stats.jsx";
+import {Pricing} from "../components/cards/Pricing.jsx";
+import {FaCopy, FaFileExport} from "react-icons/fa";
+import {PopUp} from "../components/modals/PopUp.jsx";
+import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
 
 export const Home = () => {
   const [color, setColor] = useState("#2563eb");
@@ -227,7 +227,7 @@ ${Object.entries(palette)
 
       {showTooltip && (
         <PopUp setOpen={setShowTooltip}>
-          <div className="p-4 sm:p-6 overflow-y-auto">
+          <div className="p-4 overflow-y-auto">
             <div className="dark:invert selection:bg-red-200">
               <SyntaxHighlighter
                 language="javascript"
@@ -250,7 +250,7 @@ ${Object.entries(palette)
                 "Copied"
               ) : (
                 <>
-                  Copy Code <FaCopy />
+                  Copy Code <FaCopy/>
                 </>
               )}
             </button>
