@@ -8,7 +8,7 @@ export const Header = () => {
 
   return (
     <div
-      className={`${currentTheme === "light" ? "bg-gray-50" : ""} ${currentTheme === "dark" ? "bg-neutral-950" : ""} flex w-full flex-col items-center justify-center p-5`}
+      className={`bg-transparent flex w-full flex-col items-center justify-center p-5`}
     >
       <div className="flex w-full max-w-7xl items-center justify-between">
         <div className="flex items-center justify-center gap-x-8">
