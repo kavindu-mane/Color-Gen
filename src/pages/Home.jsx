@@ -116,13 +116,13 @@ ${Object.entries(palette)
             <h1 className="text-4xl font-bold text-black dark:text-white mt-12">
               Tailwind CSS Color Generator
             </h1>
-            <h3 className="hidden sm:block text-lg text-gray-500 dark:text-gray-400 mt-2">
+            <h3 className="hidden lg:block text-lg text-gray-500 dark:text-gray-400 mt-2">
               Press space bar to generate a custom color scale
             </h3>
             <button
               type="button"
               onClick={generateNewColor}
-              className="relative mt-8 py-3 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-neutral-950 hover:bg-neutral-800 dark:bg-white dark:hover:bg-gray-300 text-white dark:text-black sm:hidden"
+              className="relative mt-8 py-3 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-neutral-950 hover:bg-neutral-800 dark:bg-white dark:hover:bg-gray-300 text-white dark:text-black lg:hidden"
             >
               Generate Random Color
             </button>
