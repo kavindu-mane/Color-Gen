@@ -21,18 +21,18 @@ export const Header = () => {
           </Link>
         </div>
 
-        <div className="flex items-center">
+        <div className="flex items-center justify-center">
           {/* Theme button */}
           <button
-            className="h-6 w-6"
+            className="h-5 w-5 flex items-center justify-center"
             onClick={() =>
               changeCurrentTheme(currentTheme === "light" ? "dark" : "light")
             }
           >
             {currentTheme === "light" ? (
-              <FaSun className="h-5 w-5" />
+              <FaSun className="h-full w-auto" />
             ) : (
-              <FaMoon className="text-white h-4 w-4" />
+              <FaMoon className="text-white h-4 w-auto" />
             )}
           </button>
         </div>
