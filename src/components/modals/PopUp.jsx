@@ -4,7 +4,7 @@ import {IoClose} from "react-icons/io5";
 export const PopUp = ({ setOpen, children }) => {
   return (
     <div className="fixed inset-0 z-[80] overflow-x-hidden overflow-y-auto flex items-center justify-center px-6 sm:px-0">
-      <div className="fixed inset-0 bg-black opacity-70" />
+      <div className="fixed inset-0 bg-black opacity-70 h-full min-h-screen" />
       <div className="opacity-100 ease-out transition-all w-full max-w-sm mx-auto">
         <div className="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-neutral-900">
           <div className="absolute top-2 right-2">
