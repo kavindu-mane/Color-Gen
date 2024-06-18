@@ -97,7 +97,7 @@ ${Object.entries(palette)
 
   return (
     <>
-      <div className="relative isolate px-6 lg:px-8">
+      <div className="relative isolate lg:px-8">
         <div className="flex flex-col items-center justify-center min-h-screen">
           <div
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -129,7 +129,7 @@ ${Object.entries(palette)
             </button>
           </section>
 
-          <main className="px-6 xl:px-0">
+          <main className="px-6">
             <section className="flex items-center justify-center w-full py-10">
               <div className="flex items-center justify-center max-w-xl w-full">
                 <div className="relative w-12 h-[2.65rem] mt-[0.05rem] p-1.5 border rounded-bl-lg rounded-tl-lg border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-900">
